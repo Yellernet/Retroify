@@ -45,7 +45,7 @@ Hamburger.BackgroundTransparency = 1.000
 Hamburger.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Hamburger.BorderSizePixel = 0
 Hamburger.Position = UDim2.new(0.00633412506, 0, 0.111111112, 0)
-Hamburger.Size = UDim2.new(0, 33, 0, 34)
+Hamburger.Size = UDim2.new(0, 38, 0, 34)
 Hamburger.Image = "rbxasset://textures/ui/Menu/Hamburger.png"
 
 
