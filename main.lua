@@ -2,7 +2,7 @@
 -- Version: 3.2
 
 -- Instances:
-
+local userinp = game:GetService("UserInputService")
 local RobloxUi = Instance.new("ScreenGui")
 local TopBar = Instance.new("Frame")
 local Hamburger = Instance.new("ImageButton")
@@ -165,4 +165,14 @@ game.CoreGui.TopBarApp.UnibarLeftFrame:Destroy()
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
 
-
+userinp.InputBegan:Connect(function(inp, gmp)
+	if inp == Enum.KeyCode.Escape and not gmp then
+		Hamburger.MouseButton1Click:Connect(function()
+			if Hamburger.Image == "rbxasset://textures/ui/Menu/Hamburger.png" then
+				Hamburger.Image = "rbxasset://textures/ui/Menu/HamburgerDown.png"
+			else
+				Hamburger.Image = "rbxasset://textures/ui/Menu/Hamburger.png"
+			end
+		end)
+	end
+end)
