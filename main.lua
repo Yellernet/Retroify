@@ -165,10 +165,4 @@ game.CoreGui.TopBarApp.UnibarLeftFrame:Destroy()
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
 
-Hamburger.MouseButton1Click:Connect(function()
-	Hamburger.MouseButton1Click:Connect(function()
-		Hamburger.MouseButton1Click:Connect(function()
-			game.Players.LocalPlayer:Kick()
-		end)
-	end)
-end)
+
