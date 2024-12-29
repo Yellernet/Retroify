@@ -1,10 +1,13 @@
---   _______ _ ___    ___                    __    ___       __  _        ___                                     __       ____
+
+--  _______ _ ___    ___                    __    ___       __  _        ___                                     __       ____
 -- <  / __/(_) _ \  / _ | ___ ___  ___ ____/ /_  / _ \___ _/ /_(_)__    / _ \___ ___________  __ _  ___ ___  ___/ /__ ___/ / /
 -- / / _ \_  \_, / / __ |(_-</ _ \/ -_) __/ __/ / , _/ _ `/ __/ / _ \  / , _/ -_) __/ __/ _ \/  ' \/ -_) _ \/ _  / -_) _  /_/ 
 --/_/\___(_)/___/ /_/ |_/___/ .__/\__/\__/\__/ /_/|_|\_,_/\__/_/\___/ /_/|_|\__/\__/\__/\___/_/_/_/\__/_//_/\_,_/\__/\_,_(_)  
- --                        /_/                                                                                                   
+--                         /_/                                                                                                
 
--- Instances:
+
+
+
 local userinp = game:GetService("UserInputService")
 local RobloxUi = Instance.new("ScreenGui")
 local TopBar = Instance.new("Frame")
@@ -20,6 +23,7 @@ local UICorner = Instance.new("UICorner")
 
 --Properties:
 
+wait(0.2)
 RobloxUi.Name = "RobloxUi"
 RobloxUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 RobloxUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -62,7 +66,7 @@ Chat.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Chat.BorderSizePixel = 0
 Chat.Position = UDim2.new(0, 62.5, 0.111111112, 0)
 Chat.Size = UDim2.new(0, 33, 0, 34)
-Chat.Image = "rbxasset://textures/ui/Chat/Chat.png"
+Chat.Image = "rbxasset://textures/ui/Chat/ChatDown.png"
 
 local mouse = game.Players.LocalPlayer:GetMouse()
 mouse.Icon = "rbxasset://textures/ArrowFarCursor.png"
@@ -111,7 +115,7 @@ PlrName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PlrName.BackgroundTransparency = 1.000
 PlrName.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlrName.BorderSizePixel = 0
-PlrName.Position = UDim2.new(0.855898678, 0, -0.244444445, 0)
+PlrName.Position = UDim2.new(0.905898678, 0, -0.244444445, 0)
 PlrName.Size = UDim2.new(0, 200, 0, 50)
 PlrName.Font = Enum.Font.SourceSansBold
 PlrName.Text = "plr"
@@ -127,7 +131,7 @@ Account.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Account.BackgroundTransparency = 1.000
 Account.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Account.BorderSizePixel = 0
-Account.Position = UDim2.new(0.855898678, 0, 0, 0)
+Account.Position = UDim2.new(0.905898678, 0, 0, 0)
 Account.Size = UDim2.new(0, 200, 0, 50)
 Account.Font = Enum.Font.SourceSans
 Account.Text = "Account 13+"
@@ -135,39 +139,12 @@ Account.TextColor3 = Color3.fromRGB(255, 255, 255)
 Account.TextSize = 14.000
 Account.TextXAlignment = Enum.TextXAlignment.Left
 
-Player.Name = "Player"
-Player.Parent = RobloxUi
-Player.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Player.BackgroundTransparency = 0.400
-Player.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Player.BorderSizePixel = 0
-Player.Position = UDim2.new(0.879999983, 0, 0.067000001, 0)
-Player.Size = UDim2.new(0, 550, 0, 50)
 RobloxUi.ResetOnSpawn = false
 RobloxUi.IgnoreGuiInset = true
-TextLabel.Parent = Player
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.08, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 50)
-TextLabel.Font = Enum.Font.SourceSansSemibold
-TextLabel.Text = "plr"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 19.000
-TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-
-TextLabel.Text = game.Players.LocalPlayer.DisplayName
-
-UICorner.CornerRadius = UDim.new(0, 2)
-UICorner.Parent = Player
-
 game.CoreGui.TopBarApp.MenuIconHolder.TriggerPoint:Destroy()
 game.CoreGui.TopBarApp.UnibarLeftFrame:Destroy()
-game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, false)
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
 userinp.InputBegan:Connect(function(inp, gmp)
 	if inp == Enum.KeyCode.Escape and not gmp then
 		Hamburger.MouseButton1Click:Connect(function()
@@ -179,3 +156,6 @@ userinp.InputBegan:Connect(function(inp, gmp)
 		end)
 	end
 end)
+while task.wait(0.2) do
+	game.CoreGui.TopBarApp.TopBarFrame.Parent = game
+end
