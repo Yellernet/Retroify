@@ -356,6 +356,8 @@ Settings.SettingsShield.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Settings.SettingsShield.BorderSizePixel = 0
 Settings.SettingsShield.Size = UDim2.new(1, 0, 1, 0)
 Settings.SettingsShield.ZIndex = 2
+Settings.SettingsShield.Visible = false
+Settinsg.SettingsShield.Position = Udim2.new(0, 0, -1, -36)
 
 Settings.VRBackground.Name = "VRBackground"
 Settings.VRBackground.Parent = Settings.SettingsShield
