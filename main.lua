@@ -4020,7 +4020,7 @@ local function updateHB()
 end
 game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Health, false)
 game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Changed:Connect(updateHB)
-
+game.Players.LocalPlayer.CharacterAdded:Connect(UpdateHB)
 
 
 Backpack.Name = "Backpack"
