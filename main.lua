@@ -4542,10 +4542,6 @@ coroutine.wrap(BDAZXB_fake_script)()
 -- Instances:
 
 
--- Version: 3.2
-
--- Instances:
-
 local certifiednoob = Instance.new("ScreenGui")
 local BlackFrame = Instance.new("Frame")
 local CloseButton = Instance.new("ImageButton")
@@ -5047,3 +5043,4 @@ coroutine.wrap(QENVPW_fake_script)()
 local scroll = MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
 scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
 scroll.CanvasSize = UDim2.new(0,0,4,0)
+print("2019 CoreGui Script by alugpl has finished loading!")
