@@ -2122,11 +2122,11 @@ Gui.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.ScrollingFrame.BorderSizePixel = 0
 Gui.ScrollingFrame.Size = UDim2.new(1, 0, 0, 175)
 Gui.ScrollingFrame.CanvasPosition = Vector2.new(0, 2.93212318)
-local ui = Instance.new("UIListLayout")
-ui.Parent = Gui.ScrollingFrame
-ui.Name = "Layout"
-ui.SortOrder = Enum.SortOrder.Name
-ui.Padding = Udim.new(0,18)
+local uasi = Instance.new("UIListLayout")
+uasi.Parent = Gui.ScrollingFrame
+uasi.Name = "Layout"
+uasi.SortOrder = Enum.SortOrder.Name
+uasi.Padding = Udim.new(0,18)
 
 
 Gui.Page.Name = "Page"
