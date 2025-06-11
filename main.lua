@@ -4891,7 +4891,7 @@ Username.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Username.Position = UDim2.new(0, 7, 0, 0)
 Username.Size = UDim2.new(1, -14, 0, 18)
 Username.Font = Enum.Font.SourceSansBold
-Username.Text = "unknown"
+Username.Text = player.Name
 Username.TextColor3 = Color3.fromRGB(255, 255, 255)
 Username.TextSize = 14.000
 Username.TextXAlignment = Enum.TextXAlignment.Left
@@ -4909,7 +4909,11 @@ AccountType.TextColor3 = Color3.fromRGB(255, 255, 255)
 AccountType.TextSize = 11.000
 AccountType.TextXAlignment = Enum.TextXAlignment.Left
 AccountType.TextYAlignment = Enum.TextYAlignment.Bottom
-
+if game:GetService("PolicyService"):GetPolicyInfoForPlayerAsync(player).ArePaidRandomItemsRestricted == false then
+	AccountType.Text = "Account: <13"
+else
+	AccountType.Text = "Account: 13+"
+end
 HealthContainer.Name = "HealthContainer"
 HealthContainer.Parent = NameHealthContainer
 HealthContainer.BackgroundColor3 = Color3.fromRGB(228, 236, 246)
