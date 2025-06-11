@@ -4910,9 +4910,9 @@ AccountType.TextSize = 11.000
 AccountType.TextXAlignment = Enum.TextXAlignment.Left
 AccountType.TextYAlignment = Enum.TextYAlignment.Bottom
 if game:GetService("PolicyService"):GetPolicyInfoForPlayerAsync(player).ArePaidRandomItemsRestricted == false then
-	AccountType.Text = "Account: <13"
-else
 	AccountType.Text = "Account: 13+"
+else
+	AccountType.Text = "Account: <13"
 end
 HealthContainer.Name = "HealthContainer"
 HealthContainer.Parent = NameHealthContainer
