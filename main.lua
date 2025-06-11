@@ -1,7 +1,5 @@
 local player = game:GetService("Players").LocalPlayer
 
-
-
 -- Gui to Lua
 -- Version: 3.2
 if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Retroify") then
