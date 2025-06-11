@@ -10,9 +10,9 @@ end
 
 -- Gui to Lua
 
-if game.CoreGui.TopBarApp:FindFirstChild("UnibarLeftFrame") then
+if game.CoreGui.TopBarApp.TopBarApp:FindFirstChild("UnibarLeftFrame") then
 		game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true) 
-	local tba = game.CoreGui.TopBarApp 
+	local tba = game.CoreGui.TopBarApp.TopBarApp 
 	local um = tba.UnibarLeftFrame.UnibarMenu 
 	local tp = tba.MenuIconHolder.TriggerPoint 
 	tp.Background.Position = UDim2.new(0, -7.5,1, 0) 
@@ -23,20 +23,20 @@ if game.CoreGui.TopBarApp:FindFirstChild("UnibarLeftFrame") then
 	um["2"]["3"].chat.Position = UDim2.new(0,-20,0,-15) 
 	um["2"]["3"].chat.IntegrationIconFrame.IntegrationIcon.ImageTransparency = 1 
 else
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(0,0,10,0)
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.Icon.ImageTransparency = 1
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.StateOverlay.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(0,0,10,0)
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.Icon.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.StateOverlay.ImageTransparency = 1
 
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Icon.ImageTransparency = 1
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.StateOverlay.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Icon.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.StateOverlay.ImageTransparency = 1
 
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.ChatIcon.Background.ImageTransparency = 1
 
 
 
-	game.CoreGui.TopBarApp.TopBarFrame.RightFrame.Visible = false
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.ImageTransparency = 1
-	game.CoreGui.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(4,0,1,0)
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.RightFrame.Visible = false
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.ImageTransparency = 1
+	game.CoreGui.TopBarApp.TopBarApp.TopBarFrame.LeftFrame.MenuIcon.Background.Position = UDim2.new(4,0,1,0)
 
 end
 -- Version: 3.2
