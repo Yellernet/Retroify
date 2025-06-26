@@ -5123,7 +5123,7 @@ else
 	game:GetService('Players').LocalPlayer.PlayerGui.Retroify.TopBar.TopBarContainer.Settings.SettingsIcon.Image = 'rbxasset://textures/ui/Menu/Hamburger.png'
 end
 
-
+end
 
 initScript()
 
