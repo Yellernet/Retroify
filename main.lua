@@ -97,6 +97,8 @@ local Gui = {
 	PageViewClipper = Instance.new("Frame"),
 	PageView = Instance.new("ScrollingFrame"),
 	PageViewInnerFrame = Instance.new("Frame"),
+	Players = Instance.new("Frame"),
+	RowListLayout = Instance.new("UIListLayout"),
 	ButtonsContainer = Instance.new("Frame"),
 	LeaveButtonButton = Instance.new("ImageButton"),
 	LeaveButtonTextLabel = Instance.new("TextLabel"),
@@ -743,8 +745,20 @@ Gui.PageViewInnerFrame.ClipsDescendants = true
 Gui.PageViewInnerFrame.Size = UDim2.new(1, 0, 1, 0)
 Gui.PageViewInnerFrame.ZIndex = 2
 
+Gui.Players.Name = "Players"
+Gui.Players.Parent = Gui.PageViewInnerFrame
+Gui.Players.BackgroundTransparency = 1.000
+Gui.Players.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gui.Players.Size = UDim2.new(1, 0, 0, 175)
+
+Gui.RowListLayout.Name = "RowListLayout"
+Gui.RowListLayout.Parent = Gui.Players
+Gui.RowListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Gui.RowListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+Gui.RowListLayout.Padding = UDim.new(0, 18)
+
 Gui.ButtonsContainer.Name = "ButtonsContainer"
-Gui.ButtonsContainer.Parent = Gui.ScrollingFrame
+Gui.ButtonsContainer.Parent = Gui.Players
 Gui.ButtonsContainer.BackgroundTransparency = 1.000
 Gui.ButtonsContainer.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Gui.ButtonsContainer.Size = UDim2.new(1, 0, 0, 0)
@@ -2107,7 +2121,6 @@ Gui.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.ScrollingFrame.BorderSizePixel = 0
 Gui.ScrollingFrame.Size = UDim2.new(1, 0, 0, 175)
 Gui.ScrollingFrame.CanvasPosition = Vector2.new(0, 2.93212318)
-Gui.ScrollingFrame.Name = 'Players'
 
 local uasi = Instance.new("UIListLayout")
 uasi.Parent = Gui.ScrollingFrame
@@ -4137,7 +4150,7 @@ local function TYZKGEF_fake_script() -- Gui.PlayersTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.ScrollingFrame
+	local players = settingss.Parent.Players
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4188,7 +4201,7 @@ local function YAGIRED_fake_script() -- Gui.GameSettingsTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.ScrollingFrame
+	local players = settingss.Parent.Players
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4217,7 +4230,7 @@ local function EYZMAA_fake_script() -- Gui.ReportAbuseTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.ScrollingFrame
+	local players = settingss.Parent.Players
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4232,7 +4245,6 @@ local function EYZMAA_fake_script() -- Gui.ReportAbuseTab.LocalScript
 		ht.Visible = false
 		rt.Visible = false
 		rat.Visible = true
-		
 	end)
 	
 end
@@ -4247,7 +4259,7 @@ local function ZPEMX_fake_script() -- Gui.HelpTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.ScrollingFrame
+	local players = settingss.Parent.Players
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4276,7 +4288,7 @@ local function AALRJ_fake_script() -- Gui.RecordTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.ScrollingFrame
+	local players = settingss.Parent.Players
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -5104,7 +5116,7 @@ local scroll = MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.Scrolli
 scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
 scroll.CanvasSize = UDim2.new(0,0,4,0)
 print("2019 CoreGui Script by alugpl has finished loading!")
-
+game:GetService('Players').LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.Help.Visible = false
 end
 
 
