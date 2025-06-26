@@ -1,3 +1,4 @@
+local function initScript()
 local player = game:GetService("Players").LocalPlayer
 
 -- Gui to Lua
@@ -5115,3 +5116,11 @@ local scroll = MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.Scrolli
 scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
 scroll.CanvasSize = UDim2.new(0,0,4,0)
 print("2019 CoreGui Script by alugpl has finished loading!")
+
+end
+
+
+
+initScript()
+
+game:GetService('Players').LocalPlayer.CharacterAdded:Conenct(initScript)
