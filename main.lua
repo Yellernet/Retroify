@@ -5117,6 +5117,10 @@ scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
 scroll.CanvasSize = UDim2.new(0,0,4,0)
 print("2019 CoreGui Script by alugpl has finished loading!")
 game:GetService('Players').LocalPlayer.PlayerGui.Retroify.RobloxGui.SettingsShield.SettingsShield.MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.Help.Visible = false
+if game:GetService('Players').LocalPlayer.PlayerGui.Retroify.TopBar.TopBarContainer.BackgroundTransparency == 0 then
+	game:GetService('Players').LocalPlayer.PlayerGui.Retroify.TopBar.TopBarContainer.Settings.SettingsIcon.Image = 'rbxasset://textures/ui/Menu/HamburgerDown.png'
+else
+	game:GetService('Players').LocalPlayer.PlayerGui.Retroify.TopBar.TopBarContainer.Settings.SettingsIcon.Image = 'rbxasset://textures/ui/Menu/Hamburger.png'
 end
 
 
