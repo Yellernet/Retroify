@@ -97,8 +97,6 @@ local Gui = {
 	PageViewClipper = Instance.new("Frame"),
 	PageView = Instance.new("ScrollingFrame"),
 	PageViewInnerFrame = Instance.new("Frame"),
-	Players = Instance.new("Frame"),
-	RowListLayout = Instance.new("UIListLayout"),
 	ButtonsContainer = Instance.new("Frame"),
 	LeaveButtonButton = Instance.new("ImageButton"),
 	LeaveButtonTextLabel = Instance.new("TextLabel"),
@@ -744,18 +742,6 @@ Gui.PageViewInnerFrame.BorderSizePixel = 0
 Gui.PageViewInnerFrame.ClipsDescendants = true
 Gui.PageViewInnerFrame.Size = UDim2.new(1, 0, 1, 0)
 Gui.PageViewInnerFrame.ZIndex = 2
-
-Gui.Players.Name = "Players"
-Gui.Players.Parent = Gui.PageViewInnerFrame
-Gui.Players.BackgroundTransparency = 1.000
-Gui.Players.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Gui.Players.Size = UDim2.new(1, 0, 0, 175)
-
-Gui.RowListLayout.Name = "RowListLayout"
-Gui.RowListLayout.Parent = Gui.Players
-Gui.RowListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-Gui.RowListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-Gui.RowListLayout.Padding = UDim.new(0, 18)
 
 Gui.ButtonsContainer.Name = "ButtonsContainer"
 Gui.ButtonsContainer.Parent = Gui.Players
@@ -2121,6 +2107,7 @@ Gui.ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Gui.ScrollingFrame.BorderSizePixel = 0
 Gui.ScrollingFrame.Size = UDim2.new(1, 0, 0, 175)
 Gui.ScrollingFrame.CanvasPosition = Vector2.new(0, 2.93212318)
+Gui.ScrollingFrame.Name = 'Players'
 
 local uasi = Instance.new("UIListLayout")
 uasi.Parent = Gui.ScrollingFrame
@@ -4245,6 +4232,7 @@ local function EYZMAA_fake_script() -- Gui.ReportAbuseTab.LocalScript
 		ht.Visible = false
 		rt.Visible = false
 		rat.Visible = true
+		
 	end)
 	
 end
