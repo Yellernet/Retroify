@@ -5123,4 +5123,4 @@ end
 
 initScript()
 
-game:GetService('Players').LocalPlayer.CharacterAdded:Conenct(initScript)
+game:GetService('Players').LocalPlayer.CharacterAdded:Connect(initScript)
