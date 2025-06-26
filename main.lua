@@ -4400,15 +4400,6 @@ local function IAPXJD_fake_script() -- Gui.DontLeaveGameButton.LocalScript
 	local script = Instance.new('LocalScript', Gui.DontLeaveGameButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-					script.Parent.MouseButton1Click:Connect(function()
-						for i,v in ipairs(script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame:GetChildren()) do
-	
-						if v.Archivable == false then
-					v.Visible = true
-					end
-
-					
-				end
 		script.Parent.Parent.Parent.Parent.Visible = false
 	end)
 end
@@ -4455,14 +4446,6 @@ local function QGZFKI_fake_script() -- Gui.DontResetCharacterButton.LocalScript
 	local script = Instance.new('LocalScript', Gui.DontResetCharacterButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
-						for i,v in ipairs(script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame:GetChildren()) do
-	
-						if v.Archivable == false then
-					v.Visible = true
-					end
-
-					
-				end
 		script.Parent.Parent.Parent.Parent.Visible = false
 	end)
 end
@@ -4481,15 +4464,7 @@ local function HGFN_fake_script() -- Gui.LeaveGameButtonButton.LocalScript
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		for i,v in ipairs(script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame:GetChildren()) do
-					if v.Visible == true then
-						v.Archivable = false
-					end
-					
-				end
-				
-				script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.LeaveGamePage.Visible = true
-		
+		script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.LeaveGamePage.Visible = true
 	end)
 	
 end
@@ -4508,13 +4483,6 @@ local function LPWNFZE_fake_script() -- Gui.ResetCharacterButtonButton.LocalScri
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-						for i,v in ipairs(script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame:GetChildren()) do
-					if v.Visible == true then
-						v.Archivable = false
-					end
-					
-				end
-				
 		script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.ResetCharacter.Visible = true
 	end)
 	
