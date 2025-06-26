@@ -5047,7 +5047,70 @@ local function QENVPW_fake_script() -- Settings.LocalScript
 	script.Parent.MouseButton1Click:Connect(onClick)
 end
 coroutine.wrap(QENVPW_fake_script)()
+local function aok_fake_script()
+local script = Instance.new('LocalScript', HealthFill)
+	local plr = game.Players.LocalPlayer
+local char = plr.Character or plr.CharacterAdded:Wait()
+local hum = char:WaitForChild("Humanoid")
 
+local bar = script.Parent
+local barContainer = bar.Parent
+
+-- Static background (optional)
+barContainer.BackgroundColor3 = Color3.fromRGB(228, 236, 246)
+
+-- Color stops
+local RED = Color3.fromRGB(255, 28, 0)
+local YELLOW = Color3.fromRGB(250, 235, 0)
+local GREEN = Color3.fromRGB(27, 252, 107)
+
+-- Helper: Lerp between two Color3s
+local function lerpColor(color1, color2, alpha)
+	return Color3.new(
+		color1.R + (color2.R - color1.R) * alpha,
+		color1.G + (color2.G - color1.G) * alpha,
+		color1.B + (color2.B - color1.B) * alpha
+	)
+end
+
+-- Main update function
+local function updateHealth()
+	local maxHealth = math.max(hum.MaxHealth, 1)
+	local health = hum.Health
+	local healthPercent = math.clamp(health / maxHealth, 0, 1)
+
+	-- Resize bar
+	bar.Size = UDim2.new(healthPercent, 0, 1, 0)
+
+	-- Color interpolation
+	local hp = healthPercent * 100
+	local finalColor
+
+	if hp <= 50 then
+		-- RED to YELLOW
+		local t = hp / 50
+		finalColor = lerpColor(RED, YELLOW, t)
+	else
+		-- YELLOW to GREEN
+		local t = (hp - 50) / 50
+		finalColor = lerpColor(YELLOW, GREEN, t)
+	end
+
+	bar.BackgroundColor3 = finalColor
+
+	-- Hide when full health
+	barContainer.Visible = health < maxHealth
+end
+
+-- Connect signals
+hum:GetPropertyChangedSignal("Health"):Connect(updateHealth)
+hum:GetPropertyChangedSignal("MaxHealth"):Connect(updateHealth)
+
+-- Initial call
+updateHealth()
+
+end
+coroutine.wrap(aok_fake_script)()
 local scroll = MenuContainer.PageViewClipper.PageView.PageViewInnerFrame.ScrollingFrame
 scroll.ScrollBarImageColor3 = Color3.fromRGB(0,0,0)
 scroll.CanvasSize = UDim2.new(0,0,4,0)
