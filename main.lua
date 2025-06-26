@@ -5128,3 +5128,4 @@ end
 initScript()
 
 game:GetService('Players').LocalPlayer.CharacterAdded:Connect(initScript)
+game:GetService('StarterGui'):SetCoreGuiEnabled(Enum.CoreGuiType.Health, false)
