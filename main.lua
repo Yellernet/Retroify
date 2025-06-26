@@ -744,7 +744,7 @@ Gui.PageViewInnerFrame.Size = UDim2.new(1, 0, 1, 0)
 Gui.PageViewInnerFrame.ZIndex = 2
 
 Gui.ButtonsContainer.Name = "ButtonsContainer"
-Gui.ButtonsContainer.Parent = Gui.Players
+Gui.ButtonsContainer.Parent = Gui.ScrollingFrame
 Gui.ButtonsContainer.BackgroundTransparency = 1.000
 Gui.ButtonsContainer.BorderColor3 = Color3.fromRGB(27, 42, 53)
 Gui.ButtonsContainer.Size = UDim2.new(1, 0, 0, 0)
@@ -4137,7 +4137,7 @@ local function TYZKGEF_fake_script() -- Gui.PlayersTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.Players
+	local players = settingss.Parent.ScrollingFrame
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4188,7 +4188,7 @@ local function YAGIRED_fake_script() -- Gui.GameSettingsTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.Players
+	local players = settingss.Parent.ScrollingFrame
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4217,7 +4217,7 @@ local function EYZMAA_fake_script() -- Gui.ReportAbuseTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.Players
+	local players = settingss.Parent.ScrollingFrame
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4247,7 +4247,7 @@ local function ZPEMX_fake_script() -- Gui.HelpTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.Players
+	local players = settingss.Parent.ScrollingFrame
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
@@ -4276,7 +4276,7 @@ local function AALRJ_fake_script() -- Gui.RecordTab.LocalScript
 	local rt = tabs.RecordTab.TabSelection
 	local rat = tabs.ReportAbuseTab.TabSelection
 	local settingss = script.Parent.Parent.Parent.PageViewClipper.PageView.PageViewInnerFrame.Page
-	local players = settingss.Parent.Players
+	local players = settingss.Parent.ScrollingFrame
 	local report = settingss.Parent.ReportAbusePage
 	local record = settingss.Parent.Record
 	local help = settingss.Parent.Help
